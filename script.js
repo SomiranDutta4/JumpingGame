@@ -25,6 +25,10 @@ document.addEventListener('keydown', () => {
     sound.play()
     velocityY = -4
 })
+document.addEventListener('touchstart', () => {
+    sound.play()
+    velocityY = -4
+})
 const manImage = "pic.jpg"
 const birdImg = document.createElement('img')
 birdImg.src = manImage;
