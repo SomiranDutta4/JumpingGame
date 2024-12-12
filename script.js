@@ -23,11 +23,11 @@ let gameOverSound;
 
 document.addEventListener('keydown', () => {
     sound.play()
-    velocityY = -4
+    velocityY = -7
 })
 document.addEventListener('touchstart', () => {
     sound.play()
-    velocityY = -4
+    velocityY = -7
 })
 const manImage = "pic.jpg"
 const birdImg = document.createElement('img')
@@ -47,9 +47,9 @@ let topBuildingImg;
 let bottomBuildImg;
 //
 
-let velocityX = -1.2;
+let velocityX = -2;
 let velocityY = 0;
-let gravity = 0.1;
+let gravity = 0.4;
 //
 let gameOver = false;
 
@@ -94,7 +94,7 @@ function placePipes() {
         // sound.pause()
         return;
     }
-    let tolerance = Math.floor(Math.random() * 300) / 2;
+    let tolerance = Math.floor(Math.random() * 350) / 2;
     let sign = Math.floor(Math.random() * 3);
     sign = 1 - sign;
     tolerance = (sign) * (tolerance);
@@ -103,7 +103,7 @@ function placePipes() {
         image: topBuildingImg,
         X: buildX,
         Y: 0,
-        height: 200 - tolerance,
+        height: 240 - tolerance,
         width: buildWidth,
         passed: false
     }
@@ -111,7 +111,7 @@ function placePipes() {
         image: bottomBuildImg,
         X: buildX,
         Y: window.innerHeight - (230 + tolerance),
-        height: 200 + tolerance,
+        height: 240 + tolerance,
         width: buildWidth,
         passed: false
     }
